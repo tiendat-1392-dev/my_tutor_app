@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/itemScheduleActive"
+        android:icon="@drawable/ic_lists"
+        android:title="Đã được nhận"
+        app:cnb_backgroundColor="#fff"
+        app:cnb_iconColor="#005bea"
+        app:cnb_textColor="#005bea" />
+
+    <item
+        android:id="@+id/itemScheduleWait"
+        android:icon="@drawable/ic_hourglass"
+        android:title="Chờ người nhận"
+        app:cnb_backgroundColor="#fff"
+        app:cnb_iconColor="#005bea"
+        app:cnb_textColor="#005bea" />
+
+    <item
+        android:id="@+id/itemScheduleCreate"
+        android:icon="@drawable/ic_add_circle"
+        android:title="Tạo lịch mới"
+        app:cnb_backgroundColor="#fff"
+        app:cnb_iconColor="#005bea"
+        app:cnb_textColor="#005bea" />
+</menu>

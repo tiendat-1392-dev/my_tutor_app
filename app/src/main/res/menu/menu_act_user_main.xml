@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/itemScheduleRegister"
+        android:icon="@drawable/ic_edit_square"
+        android:title="Đăng ký"
+        app:cnb_backgroundColor="#fff"
+        app:cnb_iconColor="#005bea"
+        app:cnb_textColor="#005bea" />
+
+    <item
+        android:id="@+id/itemSchedulePersonal"
+        android:icon="@drawable/ic_person_book"
+        android:title="Lịch cá nhân"
+        app:cnb_backgroundColor="#fff"
+        app:cnb_iconColor="#005bea"
+        app:cnb_textColor="#005bea" />
+
+    <item
+        android:id="@+id/itemAccount"
+        android:icon="@drawable/ic_account_circle"
+        android:title="Tài khoản"
+        app:cnb_backgroundColor="#fff"
+        app:cnb_iconColor="#005bea"
+        app:cnb_textColor="#005bea" />
+</menu>

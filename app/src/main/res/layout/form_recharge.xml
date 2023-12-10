@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/bg_item"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/titleFormRecharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="Nạp tiền vào tài khoản"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rlRecharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleFormRecharge"
+            android:background="@drawable/custom_border"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/edtNumberMoney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Số tiền muốn nạp"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlRecharge"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20sp"
+            android:backgroundTint="@color/blue"
+            android:text="Xác nhận"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:ignore="ButtonStyle" />
+    </RelativeLayout>
+</layout>

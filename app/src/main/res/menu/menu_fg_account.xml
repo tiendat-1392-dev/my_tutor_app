@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/itemAccountInfo"
+        android:icon="@drawable/ic_info"
+        android:title="Thông tin"
+        app:cnb_backgroundColor="#fff"
+        app:cnb_iconColor="#005bea"
+        app:cnb_textColor="#005bea" />
+
+    <item
+        android:id="@+id/itemAccountEdit"
+        android:icon="@drawable/ic_edit"
+        android:title="Chỉnh sửa"
+        app:cnb_backgroundColor="#fff"
+        app:cnb_iconColor="#005bea"
+        app:cnb_textColor="#005bea" />
+
+    <item
+        android:id="@+id/itemChangePassword"
+        android:icon="@drawable/ic_key"
+        android:title="Đổi mật khẩu"
+        app:cnb_backgroundColor="#fff"
+        app:cnb_iconColor="#005bea"
+        app:cnb_textColor="#005bea" />
+
+    <item
+        android:id="@+id/itemRecharge"
+        android:icon="@drawable/ic_paid"
+        android:title="Nạp tiền"
+        app:cnb_backgroundColor="#fff"
+        app:cnb_iconColor="#005bea"
+        app:cnb_textColor="#005bea" />
+</menu>
