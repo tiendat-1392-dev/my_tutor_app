@@ -116,6 +116,12 @@ public class ScheduleCreateFragment extends Fragment {
         }
         Integer numberSession = Integer.valueOf(strNumberSession);
 
+        String address = binding.edtAddress.getText().toString().trim();
+        if (StringUtils.isBlank(address)) {
+            Toast.makeText(context, "Vui lòng nhập địa chỉ học", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         List<Integer> days = new ArrayList<>();
         List<Integer> hours = new ArrayList<>();
 
@@ -195,8 +201,8 @@ public class ScheduleCreateFragment extends Fragment {
         }
 
         String userId = SharedPreferenceUtil.getString(AppConstants.ACCOUNT_ID);
-        CreateScheduleRequest request =
-                new CreateScheduleRequest(userId, idSelectedSubject, price, numberSession, days, hours);
+        CreateScheduleRequest request = new CreateScheduleRequest(
+                userId, idSelectedSubject, price, numberSession, days, hours, address);
 
         long time = System.currentTimeMillis();
         String accessToken = SharedPreferenceUtil.getString(AppConstants.ACCESS_TOKEN);
@@ -219,6 +225,7 @@ public class ScheduleCreateFragment extends Fragment {
                         schedule.setPrice(price);
                         schedule.setDays(days);
                         schedule.setHours(hours);
+                        schedule.setAddress(address);
                         schedule.setAccepted(false);
                         schedule.setType(SharedPreferenceUtil.getInteger(AppConstants.ROLE));
                         schedule.setCreatedAt(new Date());
@@ -255,6 +262,7 @@ public class ScheduleCreateFragment extends Fragment {
     private void resetFormInfo() {
         binding.edtPrice.setText("");
         binding.edtNumberSession.setText("");
+        binding.edtAddress.setText("");
         binding.spnSubject.setSelection(0);
         binding.cbMonday.setChecked(false);
         binding.spnTimeMonday.setSelection(0);

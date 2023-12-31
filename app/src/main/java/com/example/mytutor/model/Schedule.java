@@ -49,6 +49,10 @@ public class Schedule {
     private Integer numberSession;
 
     @Expose
+    @SerializedName("address")
+    private String address;
+
+    @Expose
     @SerializedName("type")
     private Integer type;
 
@@ -139,6 +143,14 @@ public class Schedule {
         this.numberSession = numberSession;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public Integer getType() {
         return type;
     }
@@ -168,7 +180,8 @@ public class Schedule {
                 ", isAccepted=" + isAccepted +
                 ", price=" + price +
                 ", numberSession=" + numberSession +
-                ", type='" + type + '\'' +
+                ", address='" + address + '\'' +
+                ", type=" + type +
                 ", createdAt=" + createdAt +
                 '}';
     }

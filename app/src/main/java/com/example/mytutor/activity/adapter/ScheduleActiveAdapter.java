@@ -68,6 +68,9 @@ public class ScheduleActiveAdapter extends RecyclerView.Adapter<ScheduleActiveAd
         // Hiển thị học phí
         holder.txtPrice.setText(schedule.getPrice() + " VNĐ / 1 buổi");
 
+        // Hiển thị địa chỉ học
+        holder.txtAddress.setText(schedule.getAddress());
+
         // Hiển thị lịch học
         List<Integer> days = schedule.getDays();
         List<Integer> hours = schedule.getHours();
@@ -128,8 +131,8 @@ public class ScheduleActiveAdapter extends RecyclerView.Adapter<ScheduleActiveAd
     public static class ViewHolder extends RecyclerView.ViewHolder {
         Button btnRegister;
         LinearLayout llItemMySchedule;
-        TextView titleName, txtName, txtSubject, txtNumberSession, txtPrice, txtMonday, txtTuesday, txtWednesday,
-                txtThursday, txtFriday, txtSaturday, txtSunday;
+        TextView titleName, txtName, txtSubject, txtNumberSession, txtPrice, txtAddress, txtMonday,
+                txtTuesday, txtWednesday, txtThursday, txtFriday, txtSaturday, txtSunday;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -143,6 +146,7 @@ public class ScheduleActiveAdapter extends RecyclerView.Adapter<ScheduleActiveAd
             txtSubject = itemView.findViewById(R.id.txtSubject);
             txtNumberSession = itemView.findViewById(R.id.txtNumberSession);
             txtPrice = itemView.findViewById(R.id.txtPrice);
+            txtAddress = itemView.findViewById(R.id.txtAddress);
             txtMonday = itemView.findViewById(R.id.txtMonday);
             txtTuesday = itemView.findViewById(R.id.txtTuesday);
             txtWednesday = itemView.findViewById(R.id.txtWednesday);

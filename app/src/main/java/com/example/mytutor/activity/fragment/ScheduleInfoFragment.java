@@ -79,6 +79,8 @@ public class ScheduleInfoFragment extends Fragment {
 
         binding.txtPrice.setText(schedule.getPrice() + " VNĐ / 1 buổi");
 
+        binding.txtAddress.setText(schedule.getAddress());
+
         binding.txtCreatedAt.setText(FunctionUtils.sdf.format(schedule.getCreatedAt()));
 
         String state = schedule.isAccepted() ? "Đã được nhận" : "Chờ người nhận";

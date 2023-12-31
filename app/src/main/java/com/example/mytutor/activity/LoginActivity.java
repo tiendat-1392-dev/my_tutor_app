@@ -63,7 +63,6 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
 
         cbRemember = findViewById(R.id.cbRemember);
-        Boolean remember = SharedPreferenceUtil.getBoolean(AppConstants.REMEMBER);
 
         txtRegister = findViewById(R.id.txtRegister);
 

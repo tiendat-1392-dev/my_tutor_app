@@ -172,6 +172,9 @@ public class FunctionUtils {
         Integer numberSession = data.get("num_sessions") == null ? 0 : Double.valueOf(data.get("num_sessions").toString()).intValue();
         schedule.setNumberSession(numberSession);
 
+        String address = data.get("address") == null ? "" : data.get("address").toString();
+        schedule.setAddress(address);
+
         Integer price = data.get("price") == null ? 0 : Double.valueOf(data.get("price").toString()).intValue();
         schedule.setPrice(price);
 

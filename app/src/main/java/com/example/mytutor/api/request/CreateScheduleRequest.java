@@ -30,17 +30,21 @@ public class CreateScheduleRequest {
     @SerializedName("hour")
     private List<Integer> hours;
 
+    @Expose
+    @SerializedName("address")
+    private String address;
+
     public CreateScheduleRequest() {
     }
 
-    public CreateScheduleRequest(String user_id, String subject_id, Integer price, Integer numSessions,
-                                 List<Integer> days, List<Integer> hours) {
+    public CreateScheduleRequest(String user_id, String subject_id, Integer price, Integer numSessions, List<Integer> days, List<Integer> hours, String address) {
         this.user_id = user_id;
         this.subject_id = subject_id;
         this.price = price;
         this.numSessions = numSessions;
         this.days = days;
         this.hours = hours;
+        this.address = address;
     }
 
     public String getUser_id() {
@@ -91,15 +95,24 @@ public class CreateScheduleRequest {
         this.hours = hours;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
-        return "ScheduleRegisterRequest{" +
+        return "CreateScheduleRequest{" +
                 "user_id='" + user_id + '\'' +
                 ", subject_id='" + subject_id + '\'' +
                 ", price=" + price +
                 ", numSessions=" + numSessions +
-                ", day=" + days +
-                ", hour=" + hours +
+                ", days=" + days +
+                ", hours=" + hours +
+                ", address='" + address + '\'' +
                 '}';
     }
 }

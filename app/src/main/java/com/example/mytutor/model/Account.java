@@ -41,7 +41,7 @@ public class Account {
 
     @Expose
     @SerializedName("money")
-    private Integer money;
+    private Double money;
 
     @Expose
     @SerializedName("role")
@@ -122,11 +122,11 @@ public class Account {
         this.email = email;
     }
 
-    public Integer getMoney() {
+    public Double getMoney() {
         return money;
     }
 
-    public void setMoney(Integer money) {
+    public void setMoney(Double money) {
         this.money = money;
     }
 

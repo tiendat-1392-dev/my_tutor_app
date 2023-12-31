@@ -23,7 +23,7 @@ import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 
 public interface ApiService {
-    String DOMAIN = "http://192.168.1.184:5000/api/";
+    String DOMAIN = "http://192.168.13.123:5000/api/";
 
     ApiService retrofit = new Retrofit.Builder()
             .baseUrl(DOMAIN)

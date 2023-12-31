@@ -51,7 +51,7 @@ public class SharedPreferenceUtil {
         setString(AppConstants.DOB, loggedAccount.getDob());
         setString(AppConstants.PHONE, loggedAccount.getPhone());
         setString(AppConstants.EMAIL, loggedAccount.getEmail());
-        setInteger(AppConstants.MONEY, loggedAccount.getMoney());
+        setInteger(AppConstants.MONEY, loggedAccount.getMoney().intValue());
         setInteger(AppConstants.ROLE, loggedAccount.getRole());
         setString(AppConstants.ROLE_NAME, FunctionUtils.getRoleName(loggedAccount.getRole()));
         setString(AppConstants.CREATED_AT, FunctionUtils.sdf.format(loggedAccount.getCreatedAt()));
